@@ -1,0 +1,82 @@
+@import '../../variables';
+
+.skills {
+    text-align: center;
+    color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    font-size: 64px;
+    font-weight: 600;
+    padding: 10px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    margin-top: 150px;
+    background-color: #1a1a1a;
+
+    .skills-title {
+        color: whitesmoke;
+    }
+
+    .habilidades {
+        color: $cor-primaria; /* Cor azul desejada */
+    }
+
+    .skills-container {
+        margin-bottom: 50px;
+        margin-top: 80px;
+    }
+}
+
+.skills-box {
+    background-color: $cor-de-fundo-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px; /* Espaçamento entre as caixas */
+    max-width: 1200px; /* Largura máxima do contêiner */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 24px; /* Espaçamento entre as habilidades */
+    background-color: #191919;
+    box-shadow: $cor-box-shadow;
+    border-radius: 10px;
+    padding: 15px; /* Adicionando padding conforme solicitado */
+    width: 150px; /* Largura dos boxes */
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.box-content:hover {
+    background: linear-gradient(1200deg, $cor-de-fundo-hover , $cor-primaria);
+    transform: scale(1.1);
+    transition: all .3s ease;
+}
+
+.box-icon img {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10px; /* Espaçamento entre o ícone e o texto */
+}
+
+.box-text p {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 0;
+    color: whitesmoke;
+}
+
+@media (max-width: 768px) {
+    .skills {
+        font-size: 36px; /* Diminuindo ainda mais o tamanho da fonte em telas menores */
+    }
+
+    .box-content {
+        width: 45%; /* Largura dos boxes em telas menores */
+    }
+}

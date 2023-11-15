@@ -1,0 +1,76 @@
+/* reset.scss (ou reset.css) */
+/* Box sizing border-box reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Reset de estilos padrão do navegador */
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dd, ol, ul, figure, hr {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remover list-style dos elementos de lista */
+ol, ul {
+  list-style: none;
+}
+
+/* Remover decoração de links */
+a {
+  text-decoration: none;
+}
+
+/* Remover espaçamento extra no topo e na parte inferior dos elementos de bloco */
+body, h1, h2, h3, h4, h5, h6, figure, p, pre {
+  margin-bottom: 0;
+}
+
+/* Remover espaçamento extra no topo e na parte inferior das listas */
+dl, ol, ul {
+  margin-bottom: 0;
+}
+
+/* Remover espaçamento extra nas tabelas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Adicionar uma fonte base para uma melhor legibilidade */
+body {
+  font-family: Arial, sans-serif;
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #171717;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 8px; /* Largura da barra de rolagem */
+  background-color: #171717; /* Cor de fundo da barra de rolagem */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #3399ff; /* Cor da barra de rolagem */
+  border-radius: 4px; /* Bordas arredondadas da barra de rolagem */
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #171717; /* Cor de fundo da área da barra de rolagem */
+}
+
+/* Adicione estas regras de estilo no seu arquivo index.css */
+
+/* Estilos para tornar as setas do Slick mais visíveis */
+
+
+
+/* Adicione outros estilos conforme necessário */

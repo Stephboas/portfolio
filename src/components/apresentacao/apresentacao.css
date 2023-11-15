@@ -1,0 +1,228 @@
+@charset "UTF-8";
+/* Estilos para a apresentação */
+.presentation {
+  text-align: center;
+  margin-top: 100px;
+}
+.presentation .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.presentation .conteudo-esquerda {
+  width: 60%;
+  /* ... outras regras CSS ... */
+}
+.presentation .conteudo-esquerda .titulo-descricao {
+  font-family: "Poppins", sans-serif;
+  color: transparent;
+  display: inline-block;
+  font-size: 86px;
+  line-height: 1.2;
+  text-align: left;
+  display: inline-block;
+  margin-left: 180px; /* Espaçamento à esquerda */
+  margin-right: 600px; /* Espaçamento à direita */
+  margin-top: 50px; /* Espaçamento superior */
+  position: relative;
+}
+.presentation .conteudo-esquerda .nome {
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  height: 120px; /* Ajuste conforme necessário para aumentar a altura */
+}
+.presentation .conteudo-esquerda .sthephane,
+.presentation .conteudo-esquerda .boas {
+  font-size: 96px;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 0;
+}
+.presentation .conteudo-esquerda .sthephane {
+  color: #ffffff;
+}
+.presentation .conteudo-esquerda .boas {
+  color: #3399ff;
+  margin-left: 24px;
+}
+.presentation .conteudo-esquerda .eu-sou {
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-right: 10px;
+}
+.presentation .conteudo-esquerda .txt-rotate {
+  font-size: 30px;
+  white-space: nowrap;
+}
+.presentation .conteudo-esquerda .eu-sou-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Isso garantirá que o conteúdo esteja centralizado verticalmente na página inteira */
+  flex-direction: row; /* Garante que os itens estejam na mesma linha (horizontalmente) */
+  margin-top: -500px;
+  z-index: 1;
+}
+.presentation .desenvolvedora, .presentation .designer, .presentation .animadora {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  display: inline-block;
+  color: #3399ff;
+}
+.presentation #titulo-desenvolvedor, .presentation #titulo-designer, .presentation #titulo-animadora {
+  color: #3399ff;
+}
+.presentation .titulo-descricao p {
+  margin-top: 150px; /* Ajuste o valor conforme necessário para o espaçamento entre os títulos */
+}
+.presentation .txt-rotate-container {
+  display: inline-block;
+}
+.presentation .slash {
+  animation-name: animateslash;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+@keyframes animateslash {
+  0% {
+    opacity: 1;
+    z-index: 2;
+  }
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+.presentation .descricao {
+  font-size: 18px;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 800px;
+  text-align: justify;
+  text-justify: inter-word;
+  word-spacing: 0.2em;
+  line-height: 1.5;
+  margin-left: 180px;
+  margin-top: -400px;
+}
+.presentation .cta-buttons {
+  position: relative;
+  z-index: 2;
+  margin-top: 40px;
+  max-width: 800px;
+  margin-left: 180px;
+}
+.presentation .cta-buttons button {
+  background-color: #090909;
+  color: white;
+  border: none;
+  padding: 25px 110px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  margin-right: 30px;
+  border-radius: 24px;
+  text-decoration: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+  cursor: pointer;
+}
+.presentation .cta-buttons button:hover {
+  background-color: #202020;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  backdrop-filter: blur(8px); /* Desfoque no fundo */
+}
+.presentation a[href="caminho/para/seu/cv.pdf"] button {
+  background: linear-gradient(90deg, #C961DE, #3399ff);
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  border: none;
+  padding: 25px 110px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.presentation a[href="caminho/para/seu/cv.pdf"] button:hover {
+  background: linear-gradient(90deg, #184691, #a739bd);
+}
+.presentation .conteudo-direita {
+  width: 40%;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+.presentation .conteudo-direita .video-background {
+  width: 800px;
+  height: 800px;
+  object-fit: cover;
+  background-color: transparent;
+}
+
+/* Estilos para telas pequenas (celulares) */
+@media (max-width: 767px) {
+  /* Estilos para a apresentação */
+  .presentation {
+    text-align: center;
+    margin-top: -25px; /* Reduzindo a margem superior para telas pequenas */
+  }
+  .presentation .conteudo-esquerda {
+    width: 100%;
+    text-align: left; /* Alinhando o texto à esquerda */
+  }
+  .presentation .conteudo-esquerda .nome {
+    height: auto; /* Removendo a altura fixa */
+    margin-top: -50px; /* Espaçamento superior menor para telas pequenas */
+    display: flex; /* Habilitando flexbox para alinhar os elementos */
+    align-items: center; /* Alinhando os elementos verticalmente */
+  }
+  .presentation .conteudo-esquerda .nome .sthephane {
+    font-size: 48px; /* Reduzindo o tamanho da fonte para telas pequenas */
+    margin: 0;
+    margin-left: -150px;
+  }
+  .presentation .conteudo-esquerda .nome .boas {
+    font-size: 48px; /* Reduzindo o tamanho da fonte para telas pequenas */
+    margin: 0;
+    margin-top: 120px; /* Posicionando o "Boas" abaixo do "Sthephane" */
+    margin-left: -200px;
+  }
+  .presentation .conteudo-esquerda .eu-sou {
+    font-size: 16px; /* Reduzindo o tamanho da fonte para telas pequenas */
+    margin-left: -150px; /* Ajustando a margem à esquerda */
+    margin-top: 50px;
+  }
+  .presentation .conteudo-esquerda .txt-rotate {
+    font-size: 16px; /* Reduzindo o tamanho da fonte para telas pequenas */
+  }
+  .presentation .conteudo-esquerda .descricao {
+    font-size: 14px; /* Reduzindo o tamanho da fonte para telas pequenas */
+    margin: 0 auto 20px; /* Ajustando o espaçamento inferior e centralizando o texto */
+    margin-top: -300px;
+  }
+  .presentation .cta-buttons {
+    max-width: 100%; /* Garantindo que a largura máxima seja 100% para telas pequenas */
+    margin-top: 20px; /* Ajustando o espaçamento superior */
+    text-align: left; /* Alinhando os botões à esquerda */
+    margin-left: 50px;
+  }
+  .presentation .cta-buttons .btn-contrate,
+  .presentation .cta-buttons .btn-cv {
+    margin: 12px 0; /* Espaçamento entre os botões */
+    font-size: 12px; /* Reduzindo o tamanho da fonte dos botões */
+    padding: 15px 60px; /* Ajustando o preenchimento dos botões */
+    width: 220px; /* Definindo a largura fixa para os botões */
+  }
+  .presentation .conteudo-direita {
+    width: 100%;
+    margin-top: 20px; /* Ajustando o espaçamento superior */
+    overflow: hidden;
+  }
+  .presentation .conteudo-direita .video-background {
+    width: 100%; /* Garantindo que o vídeo ocupe 100% da largura do contêiner */
+    height: auto; /* Altura automática para manter a proporção */
+  }
+}
+
+/*# sourceMappingURL=apresentacao.css.map */

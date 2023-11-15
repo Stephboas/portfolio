@@ -1,0 +1,18 @@
+.footer-container {
+  background-color: #171717;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-bottom {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=footer.css.map */
