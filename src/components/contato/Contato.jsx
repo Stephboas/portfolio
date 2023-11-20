@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import CustomModal from "./modal"; 
 
 import enderecoIcon from "../../assets/icons/address.svg";
 import phoneIcon from "../../assets/icons/phone.svg";
@@ -11,48 +12,58 @@ const Contato = () => {
   const [telefone, setTelefone] = useState("");
   const [mensagem, setMensagem] = useState("");
   const [erroFormulario, setErroFormulario] = useState("");
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
+
     // Validar campos obrigatórios
     if (!nome || (!email && !telefone)) {
       setErroFormulario("Preencha o nome e um dos campos de contato (e-mail ou telefone).");
       return;
     }
-  
+
     // Configuração para enviar o e-mail
     const serviceId = "service_mr4pi3y";
     const templateId = "template_faiv9uo";
     const userId = "EUq2nQ_WlS_FRWjMA";
-  
+
     // Parâmetros para o e-mail
     const templateParams = {
-      nome,
-      email,
-      telefone,
-      mensagem,
+      to_name: "Sthephane Boas Machado",
+      from_name: nome,
+      from_email: email,
+      phone: telefone,
+      message: mensagem,
     };
-  
+
     // Envia o e-mail
-    emailjs.send(serviceId, templateId, templateParams, userId)
+    emailjs
+      .send(serviceId, templateId, templateParams, userId)
       .then((response) => {
         console.log("E-mail enviado com sucesso!", response.status, response.text);
         // Lógica adicional após o envio do e-mail
-  
+
         // Limpar os campos do formulário
         setNome("");
         setEmail("");
         setTelefone("");
         setMensagem("");
         setErroFormulario("");
+
+        // Exibir modal de sucesso
+        setModalIsOpen(true);
       })
       .catch((error) => {
         console.error("Erro ao enviar o e-mail:", error);
         // Lógica adicional em caso de erro no envio
-  
+
         setErroFormulario("Ocorreu um erro ao enviar o e-mail. Por favor, tente novamente mais tarde.");
       });
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
   };
 
   return (
@@ -138,6 +149,9 @@ const Contato = () => {
           </div>
         </div>
       </div>
+
+      {/* Modal de Sucesso */}
+      <CustomModal isOpen={modalIsOpen} onClose={closeModal} message="Diretamente para O Condado!" />
     </section>
   );
 };

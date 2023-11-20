@@ -130,10 +130,10 @@
 }
 .presentation .cta-buttons button:hover {
   background-color: #202020;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
-  backdrop-filter: blur(8px); /* Desfoque no fundo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
 }
-.presentation a[href="caminho/para/seu/cv.pdf"] button {
+.presentation .cta-buttons .btn-cv {
   background: linear-gradient(90deg, #C961DE, #3399ff);
   font-size: 16px;
   font-family: "Poppins", sans-serif;
@@ -144,7 +144,7 @@
   text-decoration: none;
   transition: background 0.3s ease;
 }
-.presentation a[href="caminho/para/seu/cv.pdf"] button:hover {
+.presentation .cta-buttons .btn-cv:hover {
   background: linear-gradient(90deg, #184691, #a739bd);
 }
 .presentation .conteudo-direita {

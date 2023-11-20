@@ -92,10 +92,12 @@ const Apresentacao = () => {
             </p>
           </div>
           <div className="cta-buttons">
+            <a href='#contato'>
             <button className='btn-contrate'>Contrate-me</button>
-            <a href="caminho/para/seu/cv.pdf" download>
-              <button className='btn-cv'>Download CV</button>
             </a>
+            <a href="https://raw.githubusercontent.com/Stephboas/portfolio/main/curriculo_steph.pdf" download>
+                <button className='btn-cv'>Download CV</button>
+              </a>
           </div>
         </div>
         <div className="conteudo-direita">

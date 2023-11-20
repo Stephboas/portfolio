@@ -43,7 +43,7 @@ const SobreMim = ({ sobreMimRef }) => {
         <div className="foto">
           <img src={myPhoto} alt="Minha Foto" />
           <div className="texto-digitando">
-            "Tudo o que temos a decidir é o que fazer com o tempo que nos é concedido. - Gandalf, em 'A Sociedade do Anel', J.R.R. Tolkien"
+            "Tudo o que temos a decidir é o que fazer com o tempo que nos é concedido." - Gandalf, em 'A Sociedade do Anel', J.R.R. Tolkien
           </div>
         </div>
       </div>

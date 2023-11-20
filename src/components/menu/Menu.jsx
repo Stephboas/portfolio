@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 const Menu = ({ scrollToRef }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,7 +23,7 @@ const Menu = ({ scrollToRef }) => {
       </div>
       <div className="menu-items">
         <div className={`nome-principal ${menuOpen ? 'hidden' : ''}`}>
-          StephBoas
+          <span className='steph-title'>Steph</span><span className='boas-title'>Boas</span>
         </div>
         <nav>
           <ul>

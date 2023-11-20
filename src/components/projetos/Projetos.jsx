@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import sortingHatImage from '../../assets/images/sorting_hat.svg';
+import sortingHatImage from '../../assets/images/hat-selector.gif';
+import calmindProject from '../../assets/images/calmind.png';
 
 const ProjectBox = ({ projeto }) => {
   return (
@@ -17,13 +18,15 @@ const Projetos = () => {
   const projetos = [
     {
       nome: 'Teste de Seleção',
-      descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      descricao: 'Um teste interativo das Seleções de casa de Hogwarts usando CSS, HTML e Javascript puro.',
       imagemFundo: sortingHatImage,
+      link: 'https://github.com/Stephboas/projetoSelecaoCasas/tree/selecaoCasas',
     },
     {
-      nome: 'Projeto 2',
-      descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      imagemFundo: 'path/to/image2.jpg',
+      nome: 'UX/UI Calmind',
+      descricao: 'Projeto de um aplicativo que promove bem-estar emocional e saúde mental com práticas de meditação.',
+      imagemFundo: calmindProject,
+      link: 'https://www.behance.net/gallery/140231997/Calmind-UX-UI-Case-Study',
     },
     {
       nome: 'Projeto 3',
@@ -89,12 +92,28 @@ const Projetos = () => {
       const additionalProjetos = projetos.slice(0, remainingProjetos);
   
       return [...slicedProjetos, ...additionalProjetos].map((projeto, index) => (
-        <ProjectBox key={index} projeto={projeto} />
+        <a
+          key={index}
+          href={projeto.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-link"
+        >
+          <ProjectBox projeto={projeto} />
+        </a>
       ));
     }
   
     return slicedProjetos.map((projeto, index) => (
-      <ProjectBox key={index} projeto={projeto} />
+      <a
+        key={index}
+        href={projeto.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="project-link"
+      >
+        <ProjectBox projeto={projeto} />
+      </a>
     ));
   };
 

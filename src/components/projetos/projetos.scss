@@ -19,6 +19,12 @@
     }
   }
 
+  .project-link {
+    display: inline-block;
+    color: #fff; /* Set the text color to white */
+    text-decoration: none; /* Remove default underline style for links */
+  }  
+
   .projects-container {
     display: flex;
     justify-content: center;
@@ -29,7 +35,7 @@
     overflow: hidden;
 
     .project-box {
-      background-color: $cor-de-fundo-box;
+      position: relative;
       display: flex;
       flex-direction: column;
       flex-shrink: 0;
@@ -46,25 +52,45 @@
       transition: all 0.3s ease;
       background-size: cover;
       background-position: center;
-
+    
       &:hover {
         background: linear-gradient(120deg, $cor-de-fundo-hover, $cor-primaria);
         transform: scale(1.1);
       }
-
+    
+      // Adicione uma camada de fundo preto
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4); // Ajuste o valor alfa conforme necessário
+        z-index: 1;
+        border-radius: 10px;
+      }
+    
+      h2, p {
+        position: relative;
+        z-index: 2;
+        color: #fff; /* Set the text color to white */
+        text-align: center;
+      }
+    
       h2 {
-        font-size: 1.5rem;
+        font-size: 2rem; /* Ajuste o tamanho do título conforme necessário */
         margin-bottom: 10px;
       }
-
+    
       p {
-        font-size: 1rem;
+        font-size: 1rem; /* Ajuste o tamanho do parágrafo conforme necessário */
         font-weight: 500;
         text-transform: capitalize;
         margin: 0;
-        color: #ffffff;
       }
     }
+    
 
     .prev-button,
     .next-button {
@@ -138,7 +164,11 @@
       padding: 2px;
 
       h2 {
-        font-size: 1.2rem;
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: 14px;
       }
     }
     

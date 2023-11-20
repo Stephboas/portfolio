@@ -22,6 +22,10 @@
   flex-grow: 1;
 }
 
+.menu .menu-items .nome-principal .boas-title {
+  color: $cor-primaria; // Substitua 'blue' pela cor desejada
+}
+
 .menu .menu-items .nome-principal {
   font-family: 'Oswald', sans-serif;
   padding: 16px 96px;

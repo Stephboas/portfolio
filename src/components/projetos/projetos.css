@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .projetos {
   text-align: center;
   color: #ffffff;
@@ -15,6 +16,11 @@
 .projetos .project-title h1 {
   font-size: 2rem;
 }
+.projetos .project-link {
+  display: inline-block;
+  color: #fff; /* Set the text color to white */
+  text-decoration: none; /* Remove default underline style for links */
+}
 .projetos .projects-container {
   display: flex;
   justify-content: center;
@@ -25,7 +31,7 @@
   overflow: hidden;
 }
 .projetos .projects-container .project-box {
-  background-color: #1a1a1a;
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -47,16 +53,32 @@
   background: linear-gradient(120deg, #184691, #3399ff);
   transform: scale(1.1);
 }
+.projetos .projects-container .project-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  border-radius: 10px;
+}
+.projetos .projects-container .project-box h2, .projetos .projects-container .project-box p {
+  position: relative;
+  z-index: 2;
+  color: #fff; /* Set the text color to white */
+  text-align: center;
+}
 .projetos .projects-container .project-box h2 {
-  font-size: 1.5rem;
+  font-size: 2rem; /* Ajuste o tamanho do título conforme necessário */
   margin-bottom: 10px;
 }
 .projetos .projects-container .project-box p {
-  font-size: 1rem;
+  font-size: 1rem; /* Ajuste o tamanho do parágrafo conforme necessário */
   font-weight: 500;
   text-transform: capitalize;
   margin: 0;
-  color: #ffffff;
 }
 .projetos .projects-container .prev-button,
 .projetos .projects-container .next-button {
@@ -107,9 +129,6 @@
   background-color: #3399ff;
 }
 @media (max-width: 767px) {
-  .projetos .dots {
-    margin-top: 40px; /* Aumentando a margem do dots */
-  }
   .projetos h1 {
     font-size: 36px;
   }
@@ -124,11 +143,17 @@
     padding: 2px;
   }
   .projetos .projects-container .project-box h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+  .projetos .projects-container .project-box p {
+    font-size: 14px;
   }
   .projetos .prev-button,
   .projetos .next-button {
     display: none;
+  }
+  .projetos .dots {
+    margin-top: 30px;
   }
 }
 

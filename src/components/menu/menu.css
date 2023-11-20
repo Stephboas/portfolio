@@ -20,6 +20,10 @@
   flex-grow: 1;
 }
 
+.menu .menu-items .nome-principal .boas-title {
+  color: #3399ff;
+}
+
 .menu .menu-items .nome-principal {
   font-family: "Oswald", sans-serif;
   padding: 16px 96px;
