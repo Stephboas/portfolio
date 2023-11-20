@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.ddced4e6.css",
+    "main.js": "/portfolio/static/js/main.36de16b9.js",
+    "static/js/787.5790cd8d.chunk.js": "/portfolio/static/js/787.5790cd8d.chunk.js",
+    "static/media/bruxinha_steph.webm": "/portfolio/static/media/bruxinha_steph.7cd0b9aaf2c72f15bc8b.webm",
+    "static/media/hat-selector.gif": "/portfolio/static/media/hat-selector.45f750bc59c6d8a67f8a.gif",
+    "static/media/calmind.png": "/portfolio/static/media/calmind.df3927415ea58fd552cb.png",
+    "static/media/photo_2023-10-19_18-12-38.jpg": "/portfolio/static/media/photo_2023-10-19_18-12-38.cef8bb206d52597afba2.jpg",
+    "static/media/the_shire.jpg": "/portfolio/static/media/the_shire.0280e03c3b34128a1399.jpg",
+    "static/media/postgresql.png": "/portfolio/static/media/postgresql.a442d7ae86221ddf6ee5.png",
+    "static/media/react.png": "/portfolio/static/media/react.9496be1d47755bdebe95.png",
+    "static/media/moho-anime-studio-logo.webp": "/portfolio/static/media/moho-anime-studio-logo.f37c1828d9a1712e57c7.webp",
+    "static/media/angular.png": "/portfolio/static/media/angular.3a91565a84e84066c03a.png",
+    "static/media/vue.png": "/portfolio/static/media/vue.b9514adc255abb8f0638.png",
+    "static/media/jquery.svg": "/portfolio/static/media/jquery.9fa926c7b0115859961d9745d814780a.svg",
+    "static/media/mail.svg": "/portfolio/static/media/mail.19a90609f427b1595f25e2be96a73ef3.svg",
+    "static/media/phone.svg": "/portfolio/static/media/phone.711760b7253bd0af952445b35ab0499d.svg",
+    "static/media/address.svg": "/portfolio/static/media/address.86d0f2776939bf318ed1cf3198e79f78.svg",
+    "static/media/mongodb-seeklogo.com.svg": "/portfolio/static/media/mongodb-seeklogo.com.bfa6cdd80f4a99232cadb39ebbb976d2.svg",
+    "index.html": "/portfolio/index.html",
+    "main.ddced4e6.css.map": "/portfolio/static/css/main.ddced4e6.css.map",
+    "main.36de16b9.js.map": "/portfolio/static/js/main.36de16b9.js.map",
+    "787.5790cd8d.chunk.js.map": "/portfolio/static/js/787.5790cd8d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ddced4e6.css",
+    "static/js/main.36de16b9.js"
+  ]
+}
